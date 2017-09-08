@@ -8,48 +8,145 @@ $negro: #3c3c3c;
 
 // mixins
 
-@mixin miH1{
-    font{
-        font-family: 'Roboto', sans-serif;
+@mixin miH1($miColor){
+    font: {
+        family: 'Roboto', sans-serif;
         size: 2.5rem;
-        weight: light;
+        weight:light;
     }
-    color: $negro;
+    color: $miColor;
 }
-@mixin miH2{
-    font{
-        font-family: 'Roboto', sans-serif;
+@mixin miH2($miColor){
+    font: {
+        family: 'Roboto', sans-serif;
         size: 2rem;
-        weight: light;
+        weight:light;
     }
     color: $negro;
 }
-@mixin miH3{
-    font{
-        font-family: 'Roboto', sans-serif;
+@mixin miH3($miColor){
+    font: {
+        family: 'Roboto', sans-serif;
         size: 1.75rem;
-        weight: light;
+        weight:light;
     }
-    color: $negro;
+    color: $miColor;
 }
-@mixin miH4{
-    font{
-        font-family: 'Roboto', sans-serif;
+@mixin miH4($miColor){
+    font: {
+        family: 'Roboto', sans-serif;
         size: 1.5rem;
-        weight: light;
+        weight:light;
     }
-    color: $negro;
+    color: $miColor;
 }
-@mixin p{
-    font{
+@mixin miH5($miColor){
+    font: {
+        family: 'Roboto', sans-serif;
+        size: 1.2rem;
+        weight: bold;
+    }
+    color: $miColor;
+}
+@mixin mip($miColor){
+    font: {
         font-family: 'Roboto', sans-serif;
         size: 1rem;
-        weight: 400;
     }
-    color: $negro;
+    color: $miColor;
+}
+
+@mixin letraDiseño{
+    font: {
+        family: 'curlz', sans-serif;
+        size: 6rem;
+        weight: bold;
+    }
+    color: $azul;
 }
 
 // helpers
 @mixin bordes($color){
     border: solid 2px $color;
 }
+
+// importando fuentes
+@font-face {
+    font-family: 'curlz';
+    src: local('curlz'),
+         url('../fonts/CURLZ.ttf') format('truetype');
+         font-weight: bold;
+         font-style: normal;
+  }
+
+//Estilos generales
+body{
+    @include mip($negro);
+}
+// Small devices (landscape phones, 576px and up)
+@media (  min-width: 320px) {
+    .navbar{
+        background-color: $azul;
+        a{
+            color: $negro;
+        }
+        button{
+            border: solid 1px $morado;
+        }
+        button:active{
+            border: solid 1px $morado;
+            
+        }
+        div{
+            text-align: center;
+            li a{
+                @include miH5($morado);
+            }
+        }
+    }
+
+    // EMPEZANDO MAIN SLIDER
+
+    #MainBanner{
+        @include bordes(red);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: url('../images/img_ mainBanner.jpg') no-repeat fixed left;
+        background-size: cover;
+        height: 100vh;
+
+        .row{
+            .col-12{
+                @include bordes(green);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                h1{
+                    @include letraDiseño();
+                }
+                p{
+                    @include mip($blanco);
+                }
+                button{
+                    background-color: $blanco;
+                    border: none;
+                    @include miH5($morado);
+                    font-weight: bold;
+                }
+            }
+         
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

@@ -1,3 +1,74 @@
+@font-face {
+  font-family: 'curlz';
+  src: local("curlz"), url("../fonts/CURLZ.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+body {
+  font-font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #3c3c3c; }
 
+@media (min-width: 320px) {
+  .navbar {
+    background-color: #a9eee6; }
+    .navbar a {
+      color: #3c3c3c; }
+    .navbar button {
+      border: solid 1px #625772; }
+    .navbar button:active {
+      border: solid 1px #625772; }
+    .navbar div {
+      text-align: center; }
+      .navbar div li a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #625772; }
+
+  #MainBanner {
+    border: solid 2px red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url("../images/img_ mainBanner.jpg") no-repeat fixed left;
+    background-size: cover;
+    height: 100vh; }
+    #MainBanner .row .col-12 {
+      border: solid 2px green;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-align: center; }
+      #MainBanner .row .col-12 h1 {
+        font-family: 'curlz', sans-serif;
+        font-size: 6rem;
+        font-weight: bold;
+        color: #a9eee6; }
+      #MainBanner .row .col-12 p {
+        font-font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color: #fefaec; }
+      #MainBanner .row .col-12 button {
+        background-color: #fefaec;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #625772;
+        font-weight: bold; } }
 
 /*# sourceMappingURL=estilos.css.map */
