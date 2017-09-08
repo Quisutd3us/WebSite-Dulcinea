@@ -1,0 +1,55 @@
+// definiendo variables
+
+$rojo : #F38181;
+$blanco: #fefaec;
+$azul: #a9eee6;
+$morado: #625772;
+$negro: #3c3c3c;
+
+// mixins
+
+@mixin miH1{
+    font{
+        font-family: 'Roboto', sans-serif;
+        size: 2.5rem;
+        weight: light;
+    }
+    color: $negro;
+}
+@mixin miH2{
+    font{
+        font-family: 'Roboto', sans-serif;
+        size: 2rem;
+        weight: light;
+    }
+    color: $negro;
+}
+@mixin miH3{
+    font{
+        font-family: 'Roboto', sans-serif;
+        size: 1.75rem;
+        weight: light;
+    }
+    color: $negro;
+}
+@mixin miH4{
+    font{
+        font-family: 'Roboto', sans-serif;
+        size: 1.5rem;
+        weight: light;
+    }
+    color: $negro;
+}
+@mixin p{
+    font{
+        font-family: 'Roboto', sans-serif;
+        size: 1rem;
+        weight: 400;
+    }
+    color: $negro;
+}
+
+// helpers
+@mixin bordes($color){
+    border: solid 2px $color;
+}
