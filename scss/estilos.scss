@@ -5,6 +5,7 @@ $blanco: #fefaec;
 $azul: #a9eee6;
 $morado: #625772;
 $negro: #3c3c3c;
+$cafe:#4f3d33;
 
 // mixins
 
@@ -20,9 +21,11 @@ $negro: #3c3c3c;
     font: {
         family: 'Roboto', sans-serif;
         size: 2rem;
-        weight:light;
+        weight:200;
+        
     }
-    color: $negro;
+    color: $miColor;
+    text-transform: uppercase;
 }
 @mixin miH3($miColor){
     font: {
@@ -56,13 +59,13 @@ $negro: #3c3c3c;
     color: $miColor;
 }
 
-@mixin letraDiseño{
+@mixin letraDiseño($miColor){
     font: {
         family: 'curlz', sans-serif;
         size: 6rem;
         weight: bold;
     }
-    color: $azul;
+    color: $miColor;
 }
 
 // helpers
@@ -100,7 +103,7 @@ body{
         div{
             text-align: center;
             li a{
-                @include miH5($morado);
+                @include miH3($morado)
             }
         }
     }
@@ -108,7 +111,6 @@ body{
     // EMPEZANDO MAIN SLIDER
 
     #MainBanner{
-        @include bordes(red);
 
         display: flex;
         flex-direction: column;
@@ -119,27 +121,109 @@ body{
 
         .row{
             .col-12{
-                @include bordes(green);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
                 h1{
-                    @include letraDiseño();
+                    @include letraDiseño($azul);
                 }
                 p{
                     @include mip($blanco);
                 }
                 button{
+                    width: 70%;
+                    padding: 1rem 0.5rem;
                     background-color: $blanco;
                     border: none;
                     @include miH5($morado);
-                    font-weight: bold;
+                    font-weight: 400;
+                    align-self: center;
                 }
             }
          
         }
     }
+    // EMPEZANDO SECCION NOSOTROS
+    #BannerNosotros{
+        .row{
+            text-align: center;
+            .col-12:nth-child(1){
+                padding: 2rem 1rem;
+                h2{
+                    @include miH2($negro);
+                    margin: 1rem;
+                    
+                }
+                h4{
+                    @include miH5($morado);
+                    background-color: $azul;
+                    margin: 2rem 0rem 2rem 0rem;
+                    padding: 2rem 1rem;
+                }
+                p{
+                    @include mip($negro);
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+    // EMPEZANDO SECCION BENEFICIOS
+    #sectionBeneficios{
+        padding: 0;
+        .row:nth-child(1){
+            display: flex;
+            margin: 2rem 0rem 2rem 0rem;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+            align-items: center;
+            text-align: center;
+            h2{
+                @include letraDiseño($rojo);
+                margin: 2rem 0rem;
+            }
+            h4{
+                @include miH4($blanco);
+                margin-bottom: 2rem;
+            }
+            i{
+                font-size: 4rem;
+                color: $blanco;
+                margin: 4rem 0rem 4rem 0rem;
+            }
+            div:nth-child(2){
+                background-color: $rojo;
+            }
+            div:nth-child(3){
+                background-color: $cafe;
+            }
+            div:nth-child(4){
+                background-color: $azul;
+                div{
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: $azul;
+                    i{
+                        font-size: 2.5 rem;
+                        color: $morado;
+                    }
+                    h4{
+                        color: $morado;
+                    }
+                }
+            }
+            div:nth-child(5){
+                background-color: $morado;
+            }
+        }
+    // EMPEZANDO SECCION PRECIOS
+
+        .row::nth-child(2){
+            @include
+        }
+    }
+    
  }
 
 // Medium devices (tablets, 768px and up)

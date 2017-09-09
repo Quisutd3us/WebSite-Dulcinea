@@ -1,74 +1,57 @@
-@font-face {
-  font-family: 'curlz';
-  src: local("curlz"), url("../fonts/CURLZ.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-body {
-  font-font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  color: #3c3c3c; }
+/*
+Error: Invalid CSS after "...       @include": expected identifier, was "}"
+        on line 224 of C:\xampp\htdocs\WebSite-Dulcinea\scss\estilos.scss
 
-@media (min-width: 320px) {
-  .navbar {
-    background-color: #a9eee6; }
-    .navbar a {
-      color: #3c3c3c; }
-    .navbar button {
-      border: solid 1px #625772; }
-    .navbar button:active {
-      border: solid 1px #625772; }
-    .navbar div {
-      text-align: center; }
-      .navbar div li a {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #625772; }
+219:         }
+220:     // EMPEZANDO SECCION PRECIOS
+221: 
+222:         .row::nth-child(2){
+223:             @include
+224:         }
+225:     }
+226:     
+227:  }
+228: 
+229: // Medium devices (tablets, 768px and up)
 
-  #MainBanner {
-    border: solid 2px red;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background: url("../images/img_ mainBanner.jpg") no-repeat fixed left;
-    background-size: cover;
-    height: 100vh; }
-    #MainBanner .row .col-12 {
-      border: solid 2px green;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      text-align: center; }
-      #MainBanner .row .col-12 h1 {
-        font-family: 'curlz', sans-serif;
-        font-size: 6rem;
-        font-weight: bold;
-        color: #a9eee6; }
-      #MainBanner .row .col-12 p {
-        font-font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
-        color: #fefaec; }
-      #MainBanner .row .col-12 button {
-        background-color: #fefaec;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #625772;
-        font-weight: bold; } }
-
-/*# sourceMappingURL=estilos.css.map */
+Backtrace:
+C:\xampp\htdocs\WebSite-Dulcinea\scss\estilos.scss:224
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:238:in `include_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:222:in `special_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:197:in `directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:409:in `media_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:222:in `special_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:197:in `directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:18:in `load'
+C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...       @include\": expected identifier, was \"}\"\A         on line 224 of C:\xampp\htdocs\WebSite-Dulcinea\scss\estilos.scss\A \A 219:         }\A 220:     // EMPEZANDO SECCION PRECIOS\A 221: \A 222:         .row::nth-child(2){\A 223:             @include\A 224:         }\A 225:     }\A 226:     \A 227:  }\A 228: \A 229: // Medium devices (tablets, 768px and up)"; }
