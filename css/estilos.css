@@ -1,57 +1,234 @@
-/*
-Error: Invalid CSS after "...       @include": expected identifier, was "}"
-        on line 224 of C:\xampp\htdocs\WebSite-Dulcinea\scss\estilos.scss
+@font-face {
+  font-family: 'curlz';
+  src: local("curlz"), url("../fonts/CURLZ.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+body {
+  font-font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #3c3c3c; }
 
-219:         }
-220:     // EMPEZANDO SECCION PRECIOS
-221: 
-222:         .row::nth-child(2){
-223:             @include
-224:         }
-225:     }
-226:     
-227:  }
-228: 
-229: // Medium devices (tablets, 768px and up)
+@media (min-width: 320px) {
+  .navbar {
+    background-color: #a9eee6; }
+    .navbar a {
+      color: #3c3c3c; }
+    .navbar button {
+      border: solid 1px #625772; }
+    .navbar button:active {
+      border: solid 1px #625772; }
+    .navbar div {
+      text-align: center; }
+      .navbar div li a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.75rem;
+        font-weight: light;
+        color: #625772; }
 
-Backtrace:
-C:\xampp\htdocs\WebSite-Dulcinea\scss\estilos.scss:224
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:238:in `include_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:222:in `special_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:197:in `directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:409:in `media_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:222:in `special_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:197:in `directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:18:in `load'
-C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...       @include\": expected identifier, was \"}\"\A         on line 224 of C:\xampp\htdocs\WebSite-Dulcinea\scss\estilos.scss\A \A 219:         }\A 220:     // EMPEZANDO SECCION PRECIOS\A 221: \A 222:         .row::nth-child(2){\A 223:             @include\A 224:         }\A 225:     }\A 226:     \A 227:  }\A 228: \A 229: // Medium devices (tablets, 768px and up)"; }
+  #MainBanner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url("../images/img_ mainBanner.jpg") no-repeat fixed left;
+    background-size: cover;
+    height: 100vh; }
+    #MainBanner .row .col-12 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-align: center; }
+      #MainBanner .row .col-12 h1 {
+        font-family: 'curlz', sans-serif;
+        font-size: 6rem;
+        font-weight: bold;
+        color: #a9eee6; }
+      #MainBanner .row .col-12 p {
+        font-font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color: #fefaec; }
+      #MainBanner .row .col-12 button {
+        width: 70%;
+        padding: 1rem 0.5rem;
+        background-color: #fefaec;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #625772;
+        font-weight: 400;
+        -ms-flex-item-align: center;
+            align-self: center; }
+
+  #BannerNosotros .row {
+    text-align: center; }
+    #BannerNosotros .row .col-12:nth-child(1) {
+      padding: 2rem 1rem; }
+      #BannerNosotros .row .col-12:nth-child(1) h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        font-weight: 200;
+        color: #3c3c3c;
+        text-transform: uppercase;
+        margin: 1rem; }
+      #BannerNosotros .row .col-12:nth-child(1) h4 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #625772;
+        background-color: #a9eee6;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: 2rem 1rem; }
+      #BannerNosotros .row .col-12:nth-child(1) p {
+        font-font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color: #3c3c3c;
+        margin: 1rem; }
+
+  #sectionBeneficios {
+    padding: 0; }
+    #sectionBeneficios .row:nth-child(1) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 2rem 0rem 0rem 0rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center; }
+      #sectionBeneficios .row:nth-child(1) h2 {
+        font-family: 'curlz', sans-serif;
+        font-size: 6rem;
+        font-weight: bold;
+        color: #F38181;
+        margin: 2rem 0rem; }
+      #sectionBeneficios .row:nth-child(1) h4 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        font-weight: light;
+        color: #fefaec;
+        margin-bottom: 2rem; }
+      #sectionBeneficios .row:nth-child(1) i {
+        font-size: 4rem;
+        color: #fefaec;
+        margin: 4rem 0rem 4rem 0rem; }
+      #sectionBeneficios .row:nth-child(1) div:nth-child(2) {
+        background-color: #F38181; }
+      #sectionBeneficios .row:nth-child(1) div:nth-child(3) {
+        background-color: #4f3d33; }
+      #sectionBeneficios .row:nth-child(1) div:nth-child(4) {
+        background-color: #a9eee6; }
+        #sectionBeneficios .row:nth-child(1) div:nth-child(4) div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+          background-color: #a9eee6; }
+          #sectionBeneficios .row:nth-child(1) div:nth-child(4) div i {
+            font-size: 2.5 rem;
+            color: #625772; }
+          #sectionBeneficios .row:nth-child(1) div:nth-child(4) div h4 {
+            color: #625772; }
+      #sectionBeneficios .row:nth-child(1) div:nth-child(5) {
+        background-color: #625772; }
+    #sectionBeneficios .row:nth-child(2) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center;
+      background-color: #625772; }
+      #sectionBeneficios .row:nth-child(2) .col-12 {
+        margin: 2rem 0rem; }
+        #sectionBeneficios .row:nth-child(2) .col-12 .card {
+          margin: 0rem 2rem;
+          background-color: #fefaec;
+          border-radius: 10px 10px 0px 0px; }
+          #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body {
+            padding: 0; }
+            #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body h2 {
+              margin: 2rem 0rem; }
+            #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body h4 {
+              font-family: 'Roboto', sans-serif;
+              font-size: 1.5rem;
+              font-weight: light;
+              color: #3c3c3c; }
+            #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body p.card-text {
+              padding: 0rem 2rem;
+              font-font-family: 'Roboto', sans-serif;
+              font-size: 1rem;
+              color: #4f3d33; }
+            #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body .btn {
+              width: 100%;
+              padding: 2rem;
+              border-radius: 10px 10px 0px 0px;
+              border: solid 1px #a9eee6;
+              background-color: #a9eee6;
+              font-family: 'Roboto', sans-serif;
+              font-size: 1.5rem;
+              font-weight: light;
+              color: #3c3c3c; }
+    #sectionBeneficios .row:nth-child(3) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background: url("../images/img_ bannerEmail.jpg") no-repeat fixed center;
+      background-size: cover;
+      height: 100vh; }
+      #sectionBeneficios .row:nth-child(3) div.col-md-6 {
+        padding: 0rem 2rem; }
+        #sectionBeneficios .row:nth-child(3) div.col-md-6 h1 {
+          font-family: 'curlz', sans-serif;
+          font-size: 6rem;
+          font-weight: bold;
+          color: #F38181; }
+        #sectionBeneficios .row:nth-child(3) div.col-md-6 p {
+          font-font-family: 'Roboto', sans-serif;
+          font-size: 1rem;
+          color: #3c3c3c; }
+        #sectionBeneficios .row:nth-child(3) div.col-md-6 h4 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.5rem;
+          font-weight: light;
+          color: #625772; }
+        #sectionBeneficios .row:nth-child(3) div.col-md-6 button {
+          background-color: #4f3d33; } }
+
+/*# sourceMappingURL=estilos.css.map */

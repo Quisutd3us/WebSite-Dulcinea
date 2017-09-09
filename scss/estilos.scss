@@ -173,10 +173,9 @@ body{
         padding: 0;
         .row:nth-child(1){
             display: flex;
-            margin: 2rem 0rem 2rem 0rem;
+            margin: 2rem 0rem 0rem 0rem;
             flex-direction: column;
             justify-content: center;
-            max-width: 100%;
             align-items: center;
             text-align: center;
             h2{
@@ -219,8 +218,70 @@ body{
         }
     // EMPEZANDO SECCION PRECIOS
 
-        .row::nth-child(2){
-            @include
+        .row:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: $morado;
+            .col-12{
+                margin: 2rem 0rem;
+                .card{
+                    margin: 0rem 2rem;
+                    background-color: $blanco;
+                    border-radius: 10px 10px 0px 0px;
+                    .card-body{
+                        padding: 0;
+                        h2{
+                            margin: 2rem 0rem;
+                            
+                        }
+                        h4{
+                            @include miH4($negro);
+                        }
+                        p.card-text{
+                            padding: 0rem 2rem;
+                            @include mip($cafe);
+                        }
+                        .btn{
+                            width: 100%;
+                            padding: 2rem;
+                            border-radius: 10px 10px 0px 0px;
+                            border: solid 1px $azul;
+                            background-color: $azul;
+                            @include miH4($negro);
+                            
+                        }
+                    }
+                    
+                }
+            }
+        }
+        // EMPEZANDO SECCION EMAILMARKETING
+        .row:nth-child(3){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: url('../images/img_ bannerEmail.jpg') no-repeat fixed center;
+                background-size: cover;
+                height: 100vh;
+            div.col-md-6{
+                padding: 0rem 2rem;
+                h1{
+                    @include letraDiseño($rojo);
+                }
+                p{
+                    @include mip($negro);
+                }
+                h4{
+                    @include miH4($morado);
+                }
+                button{
+                    background-color: $cafe;
+                }
+            }
+
         }
     }
     
