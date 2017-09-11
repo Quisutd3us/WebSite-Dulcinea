@@ -1,49 +1,49 @@
 // definiendo variables
-
-$rojo : #F38181;
+$rojo: #F38181;
 $blanco: #fefaec;
 $azul: #a9eee6;
 $morado: #625772;
 $negro: #3c3c3c;
 $cafe:#4f3d33;
-
 // mixins
-
-@mixin miH1($miColor){
+@mixin miH1($miColor) {
     font: {
         family: 'Roboto', sans-serif;
         size: 2.5rem;
-        weight:light;
+        weight: light;
     }
     color: $miColor;
 }
-@mixin miH2($miColor){
+
+@mixin miH2($miColor) {
     font: {
         family: 'Roboto', sans-serif;
         size: 2rem;
-        weight:200;
-        
+        weight: 200;
     }
     color: $miColor;
     text-transform: uppercase;
 }
-@mixin miH3($miColor){
+
+@mixin miH3($miColor) {
     font: {
         family: 'Roboto', sans-serif;
         size: 1.75rem;
-        weight:light;
+        weight: light;
     }
     color: $miColor;
 }
-@mixin miH4($miColor){
+
+@mixin miH4($miColor) {
     font: {
         family: 'Roboto', sans-serif;
         size: 1.5rem;
-        weight:light;
+        weight: light;
     }
     color: $miColor;
 }
-@mixin miH5($miColor){
+
+@mixin miH5($miColor) {
     font: {
         family: 'Roboto', sans-serif;
         size: 1.2rem;
@@ -51,7 +51,8 @@ $cafe:#4f3d33;
     }
     color: $miColor;
 }
-@mixin mip($miColor){
+
+@mixin mip($miColor) {
     font: {
         font-family: 'Roboto', sans-serif;
         size: 1rem;
@@ -59,79 +60,78 @@ $cafe:#4f3d33;
     color: $miColor;
 }
 
-@mixin letraDiseño($miColor){
+@mixin letraDiseño($miColor) {
     font: {
         family: 'curlz', sans-serif;
         size: 6rem;
-        weight: bold;
+        weight: bolder;
     }
     color: $miColor;
 }
 
 // helpers
-@mixin bordes($color){
+@mixin bordes($color) {
     border: solid 2px $color;
 }
 
 // importando fuentes
 @font-face {
     font-family: 'curlz';
-    src: local('curlz'),
-         url('../fonts/CURLZ.ttf') format('truetype');
-         font-weight: bold;
-         font-style: normal;
-  }
+    src: local('curlz'), url('../fonts/CURLZ.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 //Estilos generales
-body{
+body {
     @include mip($negro);
 }
+ul li{
+    list-style: none;
+    padding: 0; margin: 0;
+}
+
 // Small devices (landscape phones, 576px and up)
-@media (  min-width: 320px) {
-    .navbar{
+@media ( min-width: 320px) {
+    .navbar {
         background-color: $azul;
-        a{
+        a {
             color: $negro;
         }
-        button{
+        button {
             border: solid 1px $morado;
         }
-        button:active{
+        button:active {
             border: solid 1px $morado;
-            
         }
-        div{
+        div {
             text-align: center;
-            li a{
-                @include miH3($morado)
+            li a {
+                @include miH3($morado);
+                font-size: 1rem;
             }
         }
-    }
-
-    // EMPEZANDO MAIN SLIDER
-
-    #MainBanner{
-
+    } // EMPEZANDO MAIN SLIDER
+    #MainBanner {
         display: flex;
         flex-direction: column;
         justify-content: center;
         background: url('../images/img_ mainBanner.jpg') no-repeat fixed left;
         background-size: cover;
         height: 100vh;
-
-        .row{
-            .col-12{
+        .row {
+            .col-12 {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
-                h1{
+                h1 {
                     @include letraDiseño($azul);
                 }
-                p{
+                p {
                     @include mip($blanco);
                 }
-                button{
+                button {
                     width: 70%;
                     padding: 1rem 0.5rem;
                     background-color: $blanco;
@@ -141,157 +141,217 @@ body{
                     align-self: center;
                 }
             }
-         
         }
-    }
-    // EMPEZANDO SECCION NOSOTROS
-    #BannerNosotros{
-        .row{
+    } // EMPEZANDO SECCION NOSOTROS
+    #BannerNosotros {
+        .row {
             text-align: center;
-            .col-12:nth-child(1){
+            .col-12:nth-child(1) {
                 padding: 2rem 1rem;
-                h2{
-                    @include miH2($negro);
+                h2 {
+                    @include miH2($morado);
                     margin: 1rem;
-                    
                 }
-                h4{
+                h4 {
                     @include miH5($morado);
                     background-color: $azul;
                     margin: 2rem 0rem 2rem 0rem;
                     padding: 2rem 1rem;
                 }
-                p{
-                    @include mip($negro);
+                p {
+                    @include mip($morado);
                     margin: 1rem;
                 }
             }
         }
-    }
-    // EMPEZANDO SECCION BENEFICIOS
-    #sectionBeneficios{
+    } // EMPEZANDO SECCION BENEFICIOS
+    #sectionBeneficios {
         padding: 0;
-        .row:nth-child(1){
+        .row:nth-child(1) {
             display: flex;
             margin: 2rem 0rem 0rem 0rem;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            h2{
+            h2 {
                 @include letraDiseño($rojo);
                 margin: 2rem 0rem;
             }
-            h4{
+            h4 {
                 @include miH4($blanco);
                 margin-bottom: 2rem;
             }
-            i{
+            i {
                 font-size: 4rem;
                 color: $blanco;
                 margin: 4rem 0rem 4rem 0rem;
             }
-            div:nth-child(2){
+            div:nth-child(2) {
                 background-color: $rojo;
             }
-            div:nth-child(3){
+            div:nth-child(3) {
                 background-color: $cafe;
             }
-            div:nth-child(4){
+            div:nth-child(4) {
                 background-color: $azul;
-                div{
+                div {
                     display: flex;
                     justify-content: space-around;
                     background-color: $azul;
-                    i{
+                    i {
                         font-size: 2.5 rem;
                         color: $morado;
                     }
-                    h4{
+                    h4 {
                         color: $morado;
                     }
                 }
             }
-            div:nth-child(5){
+            div:nth-child(5) {
                 background-color: $morado;
             }
-        }
-    // EMPEZANDO SECCION PRECIOS
-
-        .row:nth-child(2){
+        } // EMPEZANDO SECCION PRECIOS
+        .row:nth-child(2) {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             background-color: $morado;
-            .col-12{
+            .col-12 {
                 margin: 2rem 0rem;
-                .card{
+                .card {
                     margin: 0rem 2rem;
                     background-color: $blanco;
                     border-radius: 10px 10px 0px 0px;
-                    .card-body{
+                    .card-body {
                         padding: 0;
-                        h2{
+                        h2 {
                             margin: 2rem 0rem;
-                            
                         }
-                        h4{
+                        h4 {
                             @include miH4($negro);
                         }
-                        p.card-text{
+                        p.card-text {
                             padding: 0rem 2rem;
                             @include mip($cafe);
                         }
-                        .btn{
+                        .btn {
                             width: 100%;
                             padding: 2rem;
                             border-radius: 10px 10px 0px 0px;
                             border: solid 1px $azul;
                             background-color: $azul;
                             @include miH4($negro);
-                            
+                        }
+                    }
+                }
+            }
+        } // EMPEZANDO SECCION EMAILMARKETING
+        .row:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('../images/img_ bannerEmail.jpg') no-repeat fixed center;
+            background-size: cover;
+            height: 100vh;
+            div.col-md-6 {
+                padding: 0rem 2rem;
+                h1 {
+                    @include letraDiseño($rojo);
+                }
+                p {
+                    @include mip($negro);
+                    font-size: 1rem;
+                }
+                h4 {
+                    @include miH4($morado);
+                    font-size: 1.5rem;
+                    margin-top: 2rem;
+                }
+                button {
+                    background-color: $cafe;
+                }
+            }
+        } // EMPEZANDO SECCION CONTACTANOS
+        #sectionFormulario {
+            background-color: $blanco;
+            div:nth-child(1).col-12 {
+                padding: 2rem 0rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2 {
+                    @include miH2($morado);
+                }
+                h4 {
+                    @include miH4($morado);
+                }
+            }
+            div:nth-child(2).col-12 {
+                padding: 1rem 0rem;
+                text-align: center;
+            }
+            .col-12 {
+                form {
+                    
+                    .form-row:nth-child(1){
+                        padding: 0rem 1rem;
+                        height: 10rem;
+                        display: flex;
+                        flex-flow: nowrap;
+                        flex-direction: column;
+                        input{
+                            border:solid 1px $rojo;
+                        }
+                        .form-control::placeholder{
+                            color:$rojo;
+                        }
+                        
+
+                    }
+                    .form-row:nth-child(2){
+                        padding: 0rem 1rem;
+                        button{
+                            border-color: $morado;
+                            background-color: $morado;
+                            color:$blanco;
+                            font-weight: 400;
                         }
                     }
                     
                 }
             }
         }
-        // EMPEZANDO SECCION EMAILMARKETING
-        .row:nth-child(3){
+         // EMPEZANDO SECCION SOCIALES
+        #sectionSociales{
+            background-color: $blanco;
+            display: flex;
+            justify-content: center;
+            ul{
+                margin: 5rem 0rem;padding: 0;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                background: url('../images/img_ bannerEmail.jpg') no-repeat fixed center;
-                background-size: cover;
-                height: 100vh;
-            div.col-md-6{
-                padding: 0rem 2rem;
-                h1{
-                    @include letraDiseño($rojo);
+                width: 50%;
+                justify-content: space-around;
+                li {
+                    i{
+                        font-size: 2.5rem;
+                        color: $morado;
+                    }
                 }
-                p{
-                    @include mip($negro);
-                }
-                h4{
-                    @include miH4($morado);
-                }
-                button{
-                    background-color: $cafe;
-                }
-            }
 
+            }
         }
     }
-    
- }
+}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {}

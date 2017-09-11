@@ -8,6 +8,11 @@ body {
   font-size: 1rem;
   color: #3c3c3c; }
 
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
 @media (min-width: 320px) {
   .navbar {
     background-color: #a9eee6; }
@@ -23,7 +28,8 @@ body {
         font-family: 'Roboto', sans-serif;
         font-size: 1.75rem;
         font-weight: light;
-        color: #625772; }
+        color: #625772;
+        font-size: 1rem; }
 
   #MainBanner {
     display: -webkit-box;
@@ -54,7 +60,7 @@ body {
       #MainBanner .row .col-12 h1 {
         font-family: 'curlz', sans-serif;
         font-size: 6rem;
-        font-weight: bold;
+        font-weight: bolder;
         color: #a9eee6; }
       #MainBanner .row .col-12 p {
         font-font-family: 'Roboto', sans-serif;
@@ -81,7 +87,7 @@ body {
         font-family: 'Roboto', sans-serif;
         font-size: 2rem;
         font-weight: 200;
-        color: #3c3c3c;
+        color: #625772;
         text-transform: uppercase;
         margin: 1rem; }
       #BannerNosotros .row .col-12:nth-child(1) h4 {
@@ -95,7 +101,7 @@ body {
       #BannerNosotros .row .col-12:nth-child(1) p {
         font-font-family: 'Roboto', sans-serif;
         font-size: 1rem;
-        color: #3c3c3c;
+        color: #625772;
         margin: 1rem; }
 
   #sectionBeneficios {
@@ -119,7 +125,7 @@ body {
       #sectionBeneficios .row:nth-child(1) h2 {
         font-family: 'curlz', sans-serif;
         font-size: 6rem;
-        font-weight: bold;
+        font-weight: bolder;
         color: #F38181;
         margin: 2rem 0rem; }
       #sectionBeneficios .row:nth-child(1) h4 {
@@ -217,18 +223,99 @@ body {
         #sectionBeneficios .row:nth-child(3) div.col-md-6 h1 {
           font-family: 'curlz', sans-serif;
           font-size: 6rem;
-          font-weight: bold;
+          font-weight: bolder;
           color: #F38181; }
         #sectionBeneficios .row:nth-child(3) div.col-md-6 p {
           font-font-family: 'Roboto', sans-serif;
           font-size: 1rem;
-          color: #3c3c3c; }
+          color: #3c3c3c;
+          font-size: 1rem; }
         #sectionBeneficios .row:nth-child(3) div.col-md-6 h4 {
           font-family: 'Roboto', sans-serif;
           font-size: 1.5rem;
           font-weight: light;
-          color: #625772; }
+          color: #625772;
+          font-size: 1.5rem;
+          margin-top: 2rem; }
         #sectionBeneficios .row:nth-child(3) div.col-md-6 button {
-          background-color: #4f3d33; } }
+          background-color: #4f3d33; }
+    #sectionBeneficios #sectionFormulario {
+      background-color: #fefaec; }
+      #sectionBeneficios #sectionFormulario div:nth-child(1).col-12 {
+        padding: 2rem 0rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #sectionBeneficios #sectionFormulario div:nth-child(1).col-12 h2 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 2rem;
+          font-weight: 200;
+          color: #625772;
+          text-transform: uppercase; }
+        #sectionBeneficios #sectionFormulario div:nth-child(1).col-12 h4 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.5rem;
+          font-weight: light;
+          color: #625772; }
+      #sectionBeneficios #sectionFormulario div:nth-child(2).col-12 {
+        padding: 1rem 0rem;
+        text-align: center; }
+      #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) {
+        padding: 0rem 1rem;
+        height: 10rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: nowrap;
+            flex-flow: nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) input {
+          border: solid 1px #F38181; }
+        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) .form-control::-webkit-input-placeholder {
+          color: #F38181; }
+        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) .form-control:-ms-input-placeholder {
+          color: #F38181; }
+        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) .form-control::placeholder {
+          color: #F38181; }
+      #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(2) {
+        padding: 0rem 1rem; }
+        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(2) button {
+          border-color: #625772;
+          background-color: #625772;
+          color: #fefaec;
+          font-weight: 400; }
+    #sectionBeneficios #sectionSociales {
+      background-color: #fefaec;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      #sectionBeneficios #sectionSociales ul {
+        margin: 5rem 0rem;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 50%;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+        #sectionBeneficios #sectionSociales ul li i {
+          font-size: 2.5rem;
+          color: #625772; } }
 
 /*# sourceMappingURL=estilos.css.map */
