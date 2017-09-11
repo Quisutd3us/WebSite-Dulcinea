@@ -86,9 +86,11 @@ $cafe:#4f3d33;
 body {
     @include mip($negro);
 }
-ul li{
+
+ul li {
     list-style: none;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -250,16 +252,18 @@ ul li{
             }
         } // EMPEZANDO SECCION EMAILMARKETING
         .row:nth-child(3) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             background: url('../images/img_ bannerEmail.jpg') no-repeat fixed center;
             background-size: cover;
             height: 100vh;
-            div.col-md-6 {
+            div.col-12 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 padding: 0rem 2rem;
                 h1 {
                     @include letraDiseño($rojo);
+                    font-size: 5rem;
                 }
                 p {
                     @include mip($negro);
@@ -278,77 +282,145 @@ ul li{
         #sectionFormulario {
             background-color: $blanco;
             div:nth-child(1).col-12 {
-                padding: 2rem 0rem;
+                padding: 2rem 1rem;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 h2 {
                     @include miH2($morado);
+                    padding: 0rem 1rem;
                 }
                 h4 {
                     @include miH4($morado);
+                    padding: 0rem 1rem;
                 }
             }
             div:nth-child(2).col-12 {
-                padding: 1rem 0rem;
-                text-align: center;
+                padding: 1rem 2rem;
+                text-align: left;
             }
             .col-12 {
                 form {
-                    
-                    .form-row:nth-child(1){
+                    .form-row:nth-child(1) {
                         padding: 0rem 1rem;
                         height: 10rem;
                         display: flex;
                         flex-flow: nowrap;
                         flex-direction: column;
-                        input{
-                            border:solid 1px $rojo;
+                        input {
+                            border: solid 1px $rojo;
                         }
-                        .form-control::placeholder{
-                            color:$rojo;
+                        .form-control::placeholder {
+                            color: $rojo;
                         }
-                        
-
                     }
-                    .form-row:nth-child(2){
+                    .form-row:nth-child(2) {
+                        margin: 1rem 0rem 0rem 0rem;
                         padding: 0rem 1rem;
-                        button{
+                        button {
                             border-color: $morado;
                             background-color: $morado;
-                            color:$blanco;
+                            color: $blanco;
                             font-weight: 400;
                         }
                     }
-                    
                 }
             }
-        }
-         // EMPEZANDO SECCION SOCIALES
-        #sectionSociales{
+        } // EMPEZANDO SECCION SOCIALES
+        #sectionSociales {
             background-color: $blanco;
             display: flex;
             justify-content: center;
-            ul{
-                margin: 5rem 0rem;padding: 0;
+            ul {
+                margin: 5rem 0rem;
+                padding: 0;
                 display: flex;
                 width: 50%;
                 justify-content: space-around;
                 li {
-                    i{
+                    i {
                         font-size: 2.5rem;
                         color: $morado;
                     }
                 }
-
             }
         }
     }
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    // EMPEZANDO MAIN SLIDER
+    #MainBanner {
+        .row {
+            .col-12 {
+                l h1 {
+                    @include letraDiseño($azul);
+                    font-size: 5rem;
+                }
+                p {
+                    @include mip($blanco);
+                    font-size: 1.5rem;
+                }
+                button {
+                    width: 30%;
+                    padding: 1rem 0.5rem;
+                    background-color: $blanco;
+                    border: none;
+                    @include miH5($morado);
+                    font-weight: 400;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    // EMPEZANDO SECCION NOSOTROS
+    #BannerNosotros {
+        .row {
+            .col-12:nth-child(1) {
+                h2 {
+                    font-size: 4rem;
+                }
+                h4 {
+                    font-size: 2rem;
+                    line-height: 3rem;
+letter-spacing: 0.8rem;                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+// EMPEZANDO SECCION BENEFICIOS
+    #sectionBeneficios {
+        padding: 0;
+        .row:nth-child(1) {
+            margin: 2rem 0rem 0rem 0rem;
+            flex-direction: row;
+            div:nth-child(1) h2{
+                padding: 2rem 0rem;
+            }
+        }
+        #sectionFormulario {
+            div:nth-child(1){
+                h4{
+                    margin-top: 1rem;
+                }
+            }
+            
+            div:nth-child(2) p.lead{
+                text-align: left;
+            }
+        }
+// EMPEZANDO ARTICLE SOCIALES
+        #sectionSociales{
+            ul li i{
+                font-size: 4rem;
+            }
+        }
+        
+    }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {}
