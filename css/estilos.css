@@ -6,7 +6,8 @@
 body {
   font-font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  color: #3c3c3c; }
+  color: #3c3c3c;
+  background-color: #fefaec; }
 
 ul li {
   list-style: none;
@@ -61,7 +62,8 @@ ul li {
         font-family: 'curlz', sans-serif;
         font-size: 6rem;
         font-weight: bolder;
-        color: #a9eee6; }
+        color: #a9eee6;
+        font-size: 5rem; }
       #MainBanner .row .col-12 p {
         font-font-family: 'Roboto', sans-serif;
         font-size: 1rem;
@@ -269,9 +271,9 @@ ul li {
           font-size: 1.5rem;
           font-weight: light;
           color: #625772;
-          padding: 0rem 1rem; }
+          padding: 1rem 1rem 0rem 1rem; }
       #sectionBeneficios #sectionFormulario div:nth-child(2).col-12 {
-        padding: 1rem 2rem;
+        padding: 0rem 2rem 1rem 2rem;
         text-align: left; }
       #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) {
         padding: 0rem 1rem;
@@ -322,12 +324,12 @@ ul li {
           font-size: 2.5rem;
           color: #625772; } }
 @media (min-width: 768px) {
-  #MainBanner .row .col-12 l h1 {
+  #MainBanner .row .col-12 h1 {
     font-family: 'curlz', sans-serif;
     font-size: 6rem;
     font-weight: bolder;
     color: #a9eee6;
-    font-size: 5rem; }
+    font-size: 8rem; }
   #MainBanner .row .col-12 p {
     font-font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -351,7 +353,7 @@ ul li {
   #BannerNosotros .row .col-12:nth-child(1) h4 {
     font-size: 2rem;
     line-height: 3rem;
-    letter-spacing: 0.8rem; }
+    letter-spacing: 0.5rem; }
   #BannerNosotros .row .col-12:nth-child(1) p {
     font-size: 1.5rem; }
 
@@ -365,11 +367,72 @@ ul li {
               flex-direction: row; }
       #sectionBeneficios .row:nth-child(1) div:nth-child(1) h2 {
         padding: 2rem 0rem; }
-    #sectionBeneficios #sectionFormulario div:nth-child(1) h4 {
-      margin-top: 1rem; }
+    #sectionBeneficios #emailMarketing div {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      #sectionBeneficios #emailMarketing div h1 {
+        font-size: 8rem; }
+    #sectionBeneficios #sectionFormulario div:first-child h2:first-child {
+      font-size: 3rem; }
     #sectionBeneficios #sectionFormulario div:nth-child(2) p.lead {
       text-align: left; }
     #sectionBeneficios #sectionSociales ul li i {
       font-size: 4rem; } }
+@media (min-width: 992px) {
+  .navbar #menuDulceria {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .navbar #menuDulceria ul li a {
+      color: #625772;
+      letter-spacing: 0.2rem; }
+    .navbar #menuDulceria ul li a:hover {
+      border-bottom: solid 2px #625772; }
+
+  #sectionBeneficios .row:first-child div:nth-child(1) h2 {
+    font-size: 8rem; } }
+@media (min-width: 1200px) {
+  #MainBanner .row div.col-12 h1 {
+    font-size: 8rem; }
+
+  #BannerNosotros .row {
+    text-align: left; }
+    #BannerNosotros .row div:nth-child(1) h4 {
+      font-size: 1rem;
+      line-height: none;
+      letter-spacing: none; }
+    #BannerNosotros .row div:nth-child(2) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+
+  #sectionBeneficios .row:nth-child(1) h2 {
+    text-align: left; }
+  #sectionBeneficios #emailMarketing {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #sectionBeneficios #emailMarketing h1 {
+      font-size: 8rem; }
+  #sectionBeneficios #sectionFormulario {
+    position: absolute;
+    width: 800px; }
+    #sectionBeneficios #sectionFormulario form {
+      margin-bottom: 10rem; }
+  #sectionBeneficios #sectionSociales {
+    padding-top: 10rem;
+    margin-left: 700px; } }
 
 /*# sourceMappingURL=estilos.css.map */
