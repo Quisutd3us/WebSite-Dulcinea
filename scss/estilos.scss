@@ -54,7 +54,7 @@ $cafe:#4f3d33;
 
 @mixin mip($miColor) {
     font: {
-        font-family: 'Roboto', sans-serif;
+        family: 'Roboto', sans-serif;
         size: 1rem;
     }
     color: $miColor;

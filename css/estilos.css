@@ -4,7 +4,7 @@
   font-weight: bold;
   font-style: normal; }
 body {
-  font-font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   color: #3c3c3c;
   background-color: #fefaec; }
@@ -65,7 +65,7 @@ ul li {
         color: #a9eee6;
         font-size: 5rem; }
       #MainBanner .row .col-12 p {
-        font-font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
         color: #fefaec; }
       #MainBanner .row .col-12 button {
@@ -101,7 +101,7 @@ ul li {
         margin: 2rem 0rem 2rem 0rem;
         padding: 2rem 1rem; }
       #BannerNosotros .row .col-12:nth-child(1) p {
-        font-font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
         color: #625772;
         margin: 1rem; }
@@ -193,7 +193,7 @@ ul li {
               color: #3c3c3c; }
             #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body p.card-text {
               padding: 0rem 2rem;
-              font-font-family: 'Roboto', sans-serif;
+              font-family: 'Roboto', sans-serif;
               font-size: 1rem;
               color: #4f3d33; }
             #sectionBeneficios .row:nth-child(2) .col-12 .card .card-body .btn {
@@ -232,7 +232,7 @@ ul li {
           color: #F38181;
           font-size: 5rem; }
         #sectionBeneficios .row:nth-child(3) div.col-12 p {
-          font-font-family: 'Roboto', sans-serif;
+          font-family: 'Roboto', sans-serif;
           font-size: 1rem;
           color: #3c3c3c;
           font-size: 1rem; }
@@ -331,7 +331,7 @@ ul li {
     color: #a9eee6;
     font-size: 8rem; }
   #MainBanner .row .col-12 p {
-    font-font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #fefaec;
     font-size: 1.5rem; }
