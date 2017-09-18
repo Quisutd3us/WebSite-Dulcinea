@@ -6,7 +6,7 @@ new WOW().init();
 var scroll = new SmoothScroll('a[href*="#"]', {
 	// Speed & Easing
 	speed: 1200, // Integer. How fast to complete the scroll in milliseconds
-	offset: 0, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+	offset: 50, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
 	easing: 'easeOutQuad' // Easing pattern to use
 });
 
