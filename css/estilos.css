@@ -43,7 +43,7 @@ ul li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: url("../images/img_ mainBanner.jpg") no-repeat fixed left;
+    background: url("../images/img_ mainBanner.jpg") no-repeat fixed right bottom;
     background-size: cover;
     height: 100vh; }
     #MainBanner .row .col-12 {
@@ -246,8 +246,21 @@ ul li {
         #sectionBeneficios .row:nth-child(3) div.col-12 button {
           background-color: #4f3d33; }
     #sectionBeneficios #sectionFormulario {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       background-color: #fefaec; }
-      #sectionBeneficios #sectionFormulario div:nth-child(1).col-12 {
+      #sectionBeneficios #sectionFormulario .formulario div:nth-child(1).col-12 {
         padding: 2rem 1rem;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -259,23 +272,23 @@ ul li {
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start; }
-        #sectionBeneficios #sectionFormulario div:nth-child(1).col-12 h2 {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(1).col-12 h2 {
           font-family: 'Roboto', sans-serif;
           font-size: 2rem;
           font-weight: 200;
           color: #625772;
           text-transform: uppercase;
           padding: 0rem 1rem; }
-        #sectionBeneficios #sectionFormulario div:nth-child(1).col-12 h4 {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(1).col-12 h4 {
           font-family: 'Roboto', sans-serif;
           font-size: 1.5rem;
           font-weight: light;
           color: #625772;
           padding: 1rem 1rem 0rem 1rem; }
-      #sectionBeneficios #sectionFormulario div:nth-child(2).col-12 {
+      #sectionBeneficios #sectionFormulario .formulario div:nth-child(2).col-12 {
         padding: 0rem 2rem 1rem 2rem;
         text-align: left; }
-      #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) {
+      #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(1) {
         padding: 0rem 1rem;
         height: 10rem;
         display: -webkit-box;
@@ -287,42 +300,56 @@ ul li {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) input {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(1) input {
           border: solid 1px #F38181; }
-        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) .form-control::-webkit-input-placeholder {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(1) .form-control::-webkit-input-placeholder {
           color: #F38181; }
-        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) .form-control:-ms-input-placeholder {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(1) .form-control:-ms-input-placeholder {
           color: #F38181; }
-        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(1) .form-control::placeholder {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(1) .form-control::placeholder {
           color: #F38181; }
-      #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(2) {
+      #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(2) {
         margin: 1rem 0rem 0rem 0rem;
         padding: 0rem 1rem; }
-        #sectionBeneficios #sectionFormulario .col-12 form .form-row:nth-child(2) button {
+        #sectionBeneficios #sectionFormulario .formulario div:nth-child(3).col-12 form .form-row:nth-child(2) button {
           border-color: #625772;
           background-color: #625772;
           color: #fefaec;
           font-weight: 400; }
-    #sectionBeneficios #sectionSociales {
-      background-color: #fefaec;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      #sectionBeneficios #sectionSociales ul {
-        margin: 5rem 0rem;
-        padding: 0;
+      #sectionBeneficios #sectionFormulario .formulario #sectionSociales {
+        background-color: #fefaec;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        width: 50%;
-        -ms-flex-pack: distribute;
-            justify-content: space-around; }
-        #sectionBeneficios #sectionSociales ul li i {
-          font-size: 2.5rem;
-          color: #625772; } }
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        #sectionBeneficios #sectionFormulario .formulario #sectionSociales ul {
+          margin: 5rem 0rem;
+          padding: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 50%;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; }
+          #sectionBeneficios #sectionFormulario .formulario #sectionSociales ul li i {
+            font-size: 2.5rem;
+            color: #625772; }
+
+  #subir {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    font-size: 2rem; }
+    #subir i {
+      color: #a9eee6; } }
 @media (min-width: 768px) {
   #MainBanner .row .col-12 h1 {
     font-family: 'curlz', sans-serif;
@@ -373,12 +400,16 @@ ul li {
               align-items: flex-start; }
       #sectionBeneficios #emailMarketing div h1 {
         font-size: 8rem; }
-    #sectionBeneficios #sectionFormulario div:first-child h2:first-child {
-      font-size: 3rem; }
-    #sectionBeneficios #sectionFormulario div:nth-child(2) p.lead {
-      text-align: left; }
-    #sectionBeneficios #sectionSociales ul li i {
-      font-size: 4rem; } }
+    #sectionBeneficios #sectionFormulario {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      #sectionBeneficios #sectionFormulario .formulario div:first-child h2:first-child {
+        font-size: 3rem; }
+      #sectionBeneficios #sectionFormulario .formulario div:nth-child(2) p.lead {
+        text-align: left; }
+      #sectionBeneficios #sectionFormulario .formulario #sectionSociales ul li i {
+        font-size: 3rem; } }
 @media (min-width: 992px) {
   .navbar #menuDulceria {
     display: -webkit-box !important;
@@ -395,7 +426,20 @@ ul li {
       border-bottom: solid 2px #625772; }
 
   #sectionBeneficios .row:first-child div:nth-child(1) h2 {
-    font-size: 8rem; } }
+    font-size: 8rem; }
+  #sectionBeneficios #sectionFormulario .formulario {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    #sectionBeneficios #sectionFormulario .formulario div:first-child h2:first-child {
+      font-size: 3rem; }
+    #sectionBeneficios #sectionFormulario .formulario div:nth-child(2) p.lead {
+      text-align: left; }
+    #sectionBeneficios #sectionFormulario .formulario #sectionSociales ul li i {
+      font-size: 3rem;
+      margin-left: 1.5rem; } }
 @media (min-width: 1200px) {
   #MainBanner .row div.col-12 h1 {
     font-size: 8rem; }
@@ -425,14 +469,6 @@ ul li {
         -ms-flex-pack: center;
             justify-content: center; }
     #sectionBeneficios #emailMarketing h1 {
-      font-size: 8rem; }
-  #sectionBeneficios #sectionFormulario {
-    position: absolute;
-    width: 800px; }
-    #sectionBeneficios #sectionFormulario form {
-      margin-bottom: 10rem; }
-  #sectionBeneficios #sectionSociales {
-    padding-top: 10rem;
-    margin-left: 700px; } }
+      font-size: 8rem; } }
 
 /*# sourceMappingURL=estilos.css.map */
