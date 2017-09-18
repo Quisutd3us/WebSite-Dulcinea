@@ -101,17 +101,39 @@ ul li {
         a {
             color: $negro;
         }
-        button {
-            border: solid 1px $morado;
-        }
-        button:active {
-            border: solid 1px $morado;
-        }
         div {
             text-align: center;
-            li a {
-                @include miH3($morado);
-                font-size: 1rem;
+            li {
+                a {
+                    @include miH3($morado);
+                    font-size: 1rem;
+                }
+                // animacion
+                @keyframes animacionMenu{
+                    0%{font-size: 1rem;}
+                    50%{font-size: 1.5rem;}
+                    100%{font-size: 1rem;}
+                }
+                a:hover{
+                    
+                    animation-name: animacionMenu;
+                    animation-duration: 1.2s;
+                    animation-timing-function: ease-in-out;
+                }
+            } 
+        }
+    }
+    .fondoMenu {
+        background-color: $morado;
+        opacity: 0.8;
+        transition: all 3s ease;
+        div {
+            ul {
+                li {
+                    a {
+                        color: white !important;
+                    }
+                }
             }
         }
     } // EMPEZANDO MAIN SLIDER
@@ -354,17 +376,18 @@ ul li {
             }
         }
     }
-    #subir{
+    #subir {
+        opacity: 0;
         display: flex;
         justify-content: flex-end;
         position: fixed;
         bottom: 3rem;
         right: 1rem;
         font-size: 2rem;
-        i{
+        transition: all 1s ease;
+        i {
             color: $azul;
         }
-    
     }
 }
 
@@ -462,9 +485,7 @@ ul li {
                         color: $morado;
                         letter-spacing: 0.2rem;
                     }
-                    a:hover {
-                        border-bottom: solid 2px $morado;
-                    }
+                    
                 }
             }
         }
@@ -478,6 +499,7 @@ ul li {
             }
         }
         #sectionFormulario {
+            margin-bottom: 8rem;
             .formulario {
                 display: flex;
                 flex-wrap: wrap;
@@ -488,19 +510,18 @@ ul li {
                 }
                 div:nth-child(2) p.lead {
                     text-align: left;
-                }// EMPEZANDO ARTICLE SOCIALES
+                } // EMPEZANDO ARTICLE SOCIALES
                 #sectionSociales {
-                    ul{
+                    ul {
                         li i {
                             font-size: 3rem;
                             margin-left: 1.5rem;
                         }
-                    } 
+                    }
                 }
             }
         }
     }
-    
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -543,6 +564,6 @@ ul li {
             h1 {
                 font-size: 8rem;
             }
-        } 
+        }
     }
 }

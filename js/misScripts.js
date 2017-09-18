@@ -5,16 +5,36 @@ new WOW().init();
 
 var scroll = new SmoothScroll('a[href*="#"]', {
 	// Speed & Easing
-	speed: 1500, // Integer. How fast to complete the scroll in milliseconds
+	speed: 1200, // Integer. How fast to complete the scroll in milliseconds
 	offset: 0, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-	easing: 'easeOutQuad', // Easing pattern to use
-	customEasing: function (time) {}, // Function. Custom easing pattern
+	easing: 'easeOutQuad' // Easing pattern to use
 });
 
 // codigo boton ir arriba para q aparezca solo despues del header
 
 $(function () {
-	// alert('jquery ok');
-	// $
-	
+	$(window).scroll(function () {
+		var miScroll = $(this).scrollTop();
+		if (miScroll > 100) {
+			$("#subir").css('opacity', '0.8');
+
+		} else {
+			$("#subir").css('opacity', '0');
+
+		}
+	})
+})
+
+// Cabezera animada
+
+
+
+$(window).scroll(function () {
+	var nav = $('#menuNav');
+	var scroll = $(window).scrollTop();
+	if (scroll >= 684) {
+		nav.addClass("fondoMenu");
+	} else {
+		nav.removeClass("fondoMenu");
+	}
 })

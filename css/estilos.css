@@ -19,10 +19,6 @@ ul li {
     background-color: #a9eee6; }
     .navbar a {
       color: #3c3c3c; }
-    .navbar button {
-      border: solid 1px #625772; }
-    .navbar button:active {
-      border: solid 1px #625772; }
     .navbar div {
       text-align: center; }
       .navbar div li a {
@@ -31,6 +27,35 @@ ul li {
         font-weight: light;
         color: #625772;
         font-size: 1rem; }
+  @-webkit-keyframes animacionMenu {
+    0% {
+      font-size: 1rem; }
+    50% {
+      font-size: 1.5rem; }
+    100% {
+      font-size: 1rem; } }
+  @keyframes animacionMenu {
+    0% {
+      font-size: 1rem; }
+    50% {
+      font-size: 1.5rem; }
+    100% {
+      font-size: 1rem; } }
+      .navbar div li a:hover {
+        -webkit-animation-name: animacionMenu;
+                animation-name: animacionMenu;
+        -webkit-animation-duration: 1.2s;
+                animation-duration: 1.2s;
+        -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out; }
+
+  .fondoMenu {
+    background-color: #625772;
+    opacity: 0.8;
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease; }
+    .fondoMenu div ul li a {
+      color: white !important; }
 
   #MainBanner {
     display: -webkit-box;
@@ -338,6 +363,7 @@ ul li {
             color: #625772; }
 
   #subir {
+    opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -347,7 +373,9 @@ ul li {
     position: fixed;
     bottom: 3rem;
     right: 1rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
     #subir i {
       color: #a9eee6; } }
 @media (min-width: 768px) {
@@ -422,24 +450,24 @@ ul li {
     .navbar #menuDulceria ul li a {
       color: #625772;
       letter-spacing: 0.2rem; }
-    .navbar #menuDulceria ul li a:hover {
-      border-bottom: solid 2px #625772; }
 
   #sectionBeneficios .row:first-child div:nth-child(1) h2 {
     font-size: 8rem; }
-  #sectionBeneficios #sectionFormulario .formulario {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    #sectionBeneficios #sectionFormulario .formulario div:first-child h2:first-child {
-      font-size: 3rem; }
-    #sectionBeneficios #sectionFormulario .formulario div:nth-child(2) p.lead {
-      text-align: left; }
-    #sectionBeneficios #sectionFormulario .formulario #sectionSociales ul li i {
-      font-size: 3rem;
-      margin-left: 1.5rem; } }
+  #sectionBeneficios #sectionFormulario {
+    margin-bottom: 8rem; }
+    #sectionBeneficios #sectionFormulario .formulario {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      #sectionBeneficios #sectionFormulario .formulario div:first-child h2:first-child {
+        font-size: 3rem; }
+      #sectionBeneficios #sectionFormulario .formulario div:nth-child(2) p.lead {
+        text-align: left; }
+      #sectionBeneficios #sectionFormulario .formulario #sectionSociales ul li i {
+        font-size: 3rem;
+        margin-left: 1.5rem; } }
 @media (min-width: 1200px) {
   #MainBanner .row div.col-12 h1 {
     font-size: 8rem; }
